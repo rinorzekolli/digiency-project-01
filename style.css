@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600&display=swap");
+
+:root {
+  --white: #fff;
+  --orange-background: #fff7f4;
+  --orange: #ff5300;
+  --black: #373737;
+  --border: 0.2rem solid rgba(0, 0, 0, 0.1);
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none !important;
+  background: var(--orange-background);
+}
+
+.container {
+  max-width: 100%;
+}
+
+.header {
+  width: auto;
+}
+
+.header .logo {
+  color: var(--orange);
+  font-family: Work Sans;
+  font-size: 39.06px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.header .logo span {
+  color: var(--black);
+}
+.header .navbar a {
+  color: var(--black);
+  margin: 14.5px;
+  font-style: normal;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+.header .navbar a:hover {
+  color: var(--orange);
+}
+
+.talk-btn {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+  display: flex;
+  padding: 10px 22px;
+  margin: 0 50px;
+  font-size: 20px;
+  gap: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--black);
+  color: var(--black);
+}
+
+#menu-btn {
+  color: var(--black);
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .header .navbar a {
+    font-size: 13px;
+  }
+  .talk-btn {
+    font-size: 13px;
+    padding: 4px 15px;
+    display: none;
+  }
+
+  .header .logo {
+    font-size: 30.06px;
+  }
+}
