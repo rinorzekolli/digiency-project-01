@@ -8,6 +8,7 @@
   --black: #373737;
   --border: 0.2rem solid rgba(0, 0, 0, 0.1);
   --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  --test: #63adc8;
 }
 * {
   font-family: "Poppins", sans-serif;
@@ -24,30 +25,30 @@ html {
   scroll-padding-top: 6.5rem;
 }
 
-section {
-  background: var(--Orange-background);
-  width: auto;
-  height: 850px;
-  flex-shrink: 0;
-}
 .header {
-  width: auto;
+  width: 1440px;
+  height: 50px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--orange-background);
 }
 
-.header .logo {
-  color: var(--orange);
-  font-family: Work Sans;
-  font-size: 39.06px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  width: 175.186px;
-  height: 46.939px;
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  margin-top: 30px;
 }
-.header .logo span {
-  color: var(--black);
-}
-.header .navbar a {
+
+.navbar a {
   color: var(--black);
   margin: 14.5px;
   font-style: normal;
@@ -55,9 +56,13 @@ section {
   font-weight: 500;
   line-height: 30px;
 }
-
-.header .navbar a:hover {
+.navbar a:hover {
   color: var(--orange);
+}
+
+.nav-btn {
+  display: inline-flex;
+  align-items: flex-start;
 }
 
 .talk-btn {
@@ -68,37 +73,26 @@ section {
   gap: 10px;
   border-radius: 5px;
   border: 1px solid var(--black);
-  color: var(--black);
 }
-
-#menu-btn {
-  font-size: 25px;
+.talk-btn a {
   color: var(--black);
-  cursor: pointer;
-  display: none;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
 }
 
 /* home section start  */
-
-.home .link-btn {
-  display: flex;
-  padding: 10px 22px;
-  align-items: flex-start;
-  color: var(--white);
-  gap: 10px;
-  width: 182px;
-  height: 50px;
-  border-radius: 5px;
-  background: var(--orange);
-  line-height: 30px;
-}
-.home img {
-  display: flex;
-  width: 553.028px;
-  height: 470.913px;
-  justify-content: center;
-  align-items: center;
+.home {
+  width: 1440px;
+  height: 800px;
   flex-shrink: 0;
+}
+.home .hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .content {
   display: flex;
@@ -109,103 +103,41 @@ section {
   font-style: normal;
   font-weight: 700;
   line-height: 73.2px;
+  margin-top: 288px;
   width: 602px;
+  height: 220px;
 }
 .content h6 {
   color: var(--Paragraph);
   width: 586px;
   height: 76px;
+  margin-top: 18px;
   font-family: Poppins;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
 }
-
-/* media queries  991px*/
-
-@media (max-width: 991px) {
-  .header .navbar a {
-    font-size: 13px;
-  }
-  .talk-btn {
-    font-size: 13px;
-    padding: 4px 15px;
-    display: none;
-  }
-
-  .header .logo {
-    font-size: 30.06px;
-  }
-
-  .home .link-btn {
-    padding: 6px 15px;
-  }
-  .home .link-btn:hover {
-    box-shadow: 4px 5px 15px 0px rgba(255, 83, 0, 0.4);
-  }
-  .content h1 {
-    font-size: 31.25px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 123.6%;
-  }
-  section {
-    padding: 4rem 0;
-    background: var(--Orange-background);
-  }
+.home img {
+  display: flex;
+  width: 553.028px;
+  height: 470.913px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  margin-top: 230px;
 }
 
-/* media queries 768  */
-
-@media (max-width: 768px) {
-  #menu-btn {
-    display: inline-block;
-    transition: 0.2s linear;
-  }
-
-  #menu-btn.fa-times {
-    transform: rotate(180deg);
-  }
-  .header .navbar.active {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
-  .header .navbar {
-    position: absolute;
-    top: 105%;
-    left: 0;
-    right: 0;
-    background-color: var(--Orange-background);
-    border-top: var(--Border);
-    border-bottom: var(--Border);
-    text-align: center;
-    flex-flow: column;
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    transition: 0.2s linear;
-  }
-
-  .header .navbar a {
-    margin: 5px;
-    font-size: 15px;
-  }
-  section {
-    padding: 2rem 0;
-    background: var(--Orange-background);
-  }
-}
-
-/* media queries 450px */
-@media (max-width: 450px) {
-  .header .navbar a {
-    font-size: 13px;
-  }
-  .talk-btn {
-    font-size: 13px;
-    padding: 4px 15px;
-    display: none;
-  }
-
-  .header .logo {
-    font-size: 30.06px;
-  }
+.home .link-btn {
+  display: flex;
+  padding: 10px 22px;
+  align-items: flex-start;
+  color: var(--white);
+  margin-top: 30px;
+  gap: 10px;
+  width: 182px;
+  height: 50px;
+  border-radius: 5px;
+  background: var(--orange);
+  line-height: 30px;
 }
