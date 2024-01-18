@@ -17,3 +17,24 @@
 //     header.classList.remove("active");
 //   }
 // };
+
+let currentIndex = 0;
+const slider = document.querySelector(".ot-slider");
+
+function showSlide(index) {
+  currentIndex = index;
+  const translateValue = -index * 33.33 + "%";
+  slider.style.transform = `translateX(${translateValue})`;
+}
+
+function nextSlide() {
+  if (currentIndex < slider.children.length - 3) {
+    showSlide(currentIndex + 1);
+  }
+}
+
+function prevSlide() {
+  if (currentIndex > 0) {
+    showSlide(currentIndex - 1);
+  }
+}
