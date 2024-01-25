@@ -39,19 +39,7 @@ function prevSlide() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  const navbarToggle = document.getElementById("navbarToggle");
-  const menu = document.querySelector(".menu");
-
-  navbarToggle.addEventListener("click", function () {
-    menu.classList.toggle("active");
-  });
-
-  // Close the menu when a navbar link is clicked
-  const navbarLinks = document.querySelectorAll(".navbar a");
-  navbarLinks.forEach(function (link) {
-    link.addEventListener("click", function () {
-      menu.classList.remove("active");
-    });
-  });
-});
+function toggleMenu() {
+  const navbar = document.querySelector(".navbar");
+  navbar.classList.toggle("show");
+}
