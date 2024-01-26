@@ -1,30 +1,14 @@
-// let menu = document.querySelector("#menu-btn");
-// let navbar = document.querySelector(".header .navbar");
-// let header = document.querySelector(".header");
-
-// menu.onclick = () => {
-//   menu.classList.toggle("fa-times");
-//   navbar.classList.toggle("active");
-// };
-
-// window.onscroll = () => {
-//   menu.classList.remove("fa-times");
-//   navbar.classList.remove("active");
-
-//   if (window.scrollY > 0) {
-//     header.classList.add("active");
-//   } else {
-//     header.classList.remove("active");
-//   }
-// };
-
+//SLIDER FUNCTIONS
 let currentIndex = 0;
 const slider = document.querySelector(".ot-slider");
+// const mobileSlier = document.querySelector(".mobile-slider");
 
 function showSlide(index) {
   currentIndex = index;
   const translateValue = -index * 33.33 + "%";
+  // const mobileTranslateValue = -index * 100 + "%";
   slider.style.transform = `translateX(${translateValue})`;
+  // mobileSlier.style.transform = `translateX(${mobileTranslateValue})`;
 }
 
 function nextSlide() {
@@ -39,7 +23,17 @@ function prevSlide() {
   }
 }
 
-function toggleMenu() {
-  const navbar = document.querySelector(".navbar");
-  navbar.classList.toggle("show");
-}
+//MENU BUTTON
+const headerMenu = document.querySelector(".header__menu"),
+  menuBtn = document.querySelector(".menu-btn"),
+  headerMenuItems = document.querySelectorAll("li a");
+
+menuBtn.addEventListener("click", () => {
+  headerMenu.classList.toggle("show");
+});
+
+headerMenuItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    headerMenu.classList.remove("show");
+  });
+});

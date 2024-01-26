@@ -5,13 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Digiency Design</title>
     <link rel="stylesheet" href="assets/css/style.css" />
-    <!-- FONTAWESOME -->
-    <link rel="stylesheet" href="assets/css/fontawesome.min.css" />
-    <!-- FONTAWESOME -->
   </head>
   <body>
     <!--------------------Header Section -------------------->
-    <header>
+    <header class="header">
       <div class="container flex-row">
         <div class="header__logo">
           <img src="/img/Digiency.png" alt="Digiency" />
@@ -20,15 +17,15 @@
           <ul class="header__menu flex-row">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About Us</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#service">Services</a></li>
+            <li><a href="#casestudy">Portfolio</a></li>
             <li><a href="#blog">Blog</a></li>
-            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#subscription">Contact Us</a></li>
           </ul>
         </nav>
         <div class="right flex-center">
-          <a href="#contact" class="btn-head">Let's Talk</a>
-          <div class="menu-btn">
+          <a href="#" class="btn-head">Let's Talk</a>
+          <div id="menu-btn" class="menu-btn">
             <!-- <i class="fas fa-bars"></i> -->
             <div class="bar"></div>
             <div class="bar"></div>
@@ -37,9 +34,9 @@
         </div>
       </div>
     </header>
-    <!--------------------Home -------------------->
+    <!--------------------HOME -------------------->
     <section class="orange-bg">
-      <div id="home" class="container orange-bg flex-row">
+      <div id="home" class="container flex-row">
         <div class="home__content">
           <h1 class="title">
             Choose What Matters To Your Business & Your Customers.
@@ -224,6 +221,7 @@
             <div class="cs-gallery_template"></div>
             <img src="/img/Image03.png" alt="Image 3" />
           </picture>
+
           <picture id="pic-1">
             <div class="cs-gallery_template"></div>
             <img src="/img/Image02.png" alt="Image 2" />
@@ -235,6 +233,10 @@
           <picture id="pic-1">
             <div class="cs-gallery_template"></div>
             <img src="/img/Image05.png" alt="Image 5" />
+          </picture>
+          <picture id="pic-1">
+            <div class="cs-gallery_template"></div>
+            <img src="/img/Image03.png" alt="Image 3" />
           </picture>
           <picture id="pic-1">
             <div class="cs-gallery_template"></div>
@@ -265,7 +267,7 @@
         </div>
         <div class="ot-testimetional_card">
           <div class="slider-box">
-            <div class="ot-slider">
+            <div class="ot-slider mobile-slider">
               <!--card start-->
               <div class="ot-card">
                 <div class="review-stars">
@@ -646,17 +648,17 @@
       <section class="white-bg">
         <div class="container flex-center">
           <div class="our-performance">
-            <div class="performance-box">
+            <div class="performance-box performance-line">
               <img src="/img/man.png" alt="man.png" />
               <h1>120</h1>
               <p>Top Expert</p>
             </div>
-            <div class="performance-box">
+            <div class="performance-box performance-line">
               <img src="/img/target.png" alt="target.png" />
               <h1>120</h1>
               <p>Top Expert</p>
             </div>
-            <div class="performance-box">
+            <div class="performance-box performance-line">
               <img src="/img/analysis.png" alt="analysis.png" />
               <h1>120</h1>
               <p>Top Expert</p>
