@@ -4,7 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Digiency Design</title>
+    <!-- STYLE LINKS  -->
+    <!-- style css  -->
     <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- swiper css link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- slider  -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      charset="UTF-8"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+    />
   </head>
   <body>
     <!--------------------Header Section -------------------->
@@ -236,10 +255,6 @@
           </picture>
           <picture id="pic-1">
             <div class="cs-gallery_template"></div>
-            <img src="/img/Image03.png" alt="Image 3" />
-          </picture>
-          <picture id="pic-1">
-            <div class="cs-gallery_template"></div>
             <img src="/img/Image06.png" alt="Image 6" />
           </picture>
           <picture id="pic-1">
@@ -267,7 +282,7 @@
         </div>
         <div class="ot-testimetional_card">
           <div class="slider-box">
-            <div class="ot-slider mobile-slider">
+            <div class="ot-slider mobilee-slider">
               <!--card start-->
               <div class="ot-card">
                 <div class="review-stars">
@@ -460,38 +475,7 @@
               </div>
 
               <!--card end-->
-              <!--card start-->
-              <div class="ot-card">
-                <div class="review-stars">
-                  <img src="/img/star-s-fill.png" alt="all-star-review.png" />
-                  <img src="/img/star-s-fill.png" alt="all-star-review.png" />
-                  <img src="/img/star-s-fill.png" alt="all-star-review.png" />
-                  <img src="/img/star-s-fill.png" alt="all-star-review.png" />
-                  <img
-                    src="/img/star-half-s-fill.png"
-                    alt="half-star-review.png"
-                  />
-                </div>
-                <div class="ot-paragraph_card">
-                  <p>
-                    Lorem ipsum dolor sit amet, consecte tur adipiscing elit.
-                    Ultrices blandit pelle ntesque nibh arcu elementum odio
-                    justo. Rhoncus.
-                  </p>
-                </div>
-                <div class="ot-profile_card">
-                  <img src="/img/philip.png" alt="image-profile" />
-                  <div class="ot-profile_name">
-                    <h2>Phillip Levin</h2>
-                    <p>CEO / Creative IT</p>
-                  </div>
-                  <div class="quotes-card">
-                    <img src="img/double-quotes-l.png" alt="quotes-pic.png" />
-                  </div>
-                </div>
-              </div>
 
-              <!--card end-->
               <!--card start-->
               <div class="ot-card">
                 <div class="review-stars">
@@ -598,6 +582,8 @@
           <button class="ot-btn next-btn" onclick="nextSlide()">
             <img src="/img/right.png" alt="" />
           </button>
+
+          <div class="swiper-pagination"></div>
         </div>
       </div>
     </section>
@@ -866,6 +852,9 @@
         </div>
       </div>
     </section>
+    <!-- SCRIPT LINK -->
     <script src="index.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>
 </html>

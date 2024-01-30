@@ -656,8 +656,6 @@ OUR TESTIMONIAL
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1170px;
-  height: 271px;
   position: relative;
   margin-top: 60px;
 }
@@ -665,6 +663,8 @@ OUR TESTIMONIAL
   position: relative;
   overflow: hidden;
   padding: 0 15px;
+  max-width: 1170px;
+  height: 271px;
 }
 
 .ot-slider {
@@ -687,6 +687,7 @@ OUR TESTIMONIAL
   width: 370px;
   height: 270px;
   flex-shrink: 0;
+  width: calc(100% / 2);
 }
 
 .ot-btn {
@@ -969,7 +970,7 @@ OUR PERFORMANCE
   position: absolute;
   content: "";
   width: 3px;
-  height: 120px;
+  height: 134px;
   background-color: var(--white);
   transform: translateY(-50%);
   top: 50%;
@@ -988,6 +989,10 @@ OUR PERFORMANCE
 }
 
 .blog-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   width: 608px;
   margin-bottom: 60px;
 }
@@ -1026,11 +1031,11 @@ OUR PERFORMANCE
 }
 .ob-blog_paragraph::before {
   left: 0;
-  margin-left: 35%;
+  margin-left: -70%;
 }
 .ob-blog_paragraph::after {
   right: 0;
-  margin-right: 35%;
+  margin-right: -70%;
 }
 
 .ob-blog_title {
@@ -1492,4 +1497,48 @@ OUR FOOTER
   }
 
   /* CASE STUDY END  */
+
+  /* CAPABILITIES  */
+
+  #capabilities {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .our-performance {
+    flex-direction: column;
+    width: 350px;
+    height: auto;
+  }
+  .performance-box {
+    padding: 3rem;
+  }
+  .performance-line::before {
+    display: none;
+  }
+  .performance-line::after {
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 134px;
+    background-color: var(--white);
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+  }
+  .performance-line::after {
+    bottom: 0;
+    margin-left: 33px;
+  }
+
+  /* OUR BLOG  */
+  #blog {
+    height: auto;
+  }
+  .blog-post {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .blog-post {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

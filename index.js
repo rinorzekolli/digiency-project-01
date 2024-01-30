@@ -37,3 +37,13 @@ headerMenuItems.forEach((item) => {
     headerMenu.classList.remove("show");
   });
 });
+
+var swiper = new Swiper(".slider-box", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
