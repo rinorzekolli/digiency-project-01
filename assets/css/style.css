@@ -113,16 +113,16 @@ header {
 .header__menu li a:hover {
   color: var(--orange);
 }
-header .right {
-  gap: 5%;
-}
-.btn-head {
+
+.header__menu .btn-head {
   text-align: center;
   display: inline-block;
   padding: 10px 22px;
   align-items: flex-start;
-  width: 135px;
   height: 50px;
+  font-weight: 500;
+  line-height: 30px;
+  font-size: 20px;
   border-radius: 5px;
   border: 1px solid var(--black);
 }
@@ -141,16 +141,15 @@ header .right {
   gap: 20px;
 }
 .home__content h1 {
-  width: 602px;
   color: var(--black);
   font-family: Poppins;
   font-size: 48.83px;
   font-style: normal;
   font-weight: 700;
   line-height: 73.2px; /* 149.908% */
+  word-wrap: break-word;
 }
 .home__content p {
-  width: 586px;
   height: 76px;
   color: var(--paragraph);
   font-family: Poppins;
@@ -255,7 +254,6 @@ OUR SERVICES
 
 .service-cards {
   padding: 30px 25px;
-  width: 370px;
   height: 300px;
   flex-shrink: 0;
   border-radius: 10px;
@@ -305,7 +303,6 @@ OUR SERVICES
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
-  width: 325px;
   height: 77px;
 }
 
@@ -374,7 +371,6 @@ ABOUT US
   font-weight: 600;
   line-height: 58.59px;
   color: var(--black);
-  width: 491px;
   height: 118px;
 }
 .about-content_paragraph {
@@ -383,7 +379,6 @@ ABOUT US
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
-  width: 544px;
   height: 77px;
   color: var(--paragraph);
 }
@@ -397,10 +392,10 @@ ABOUT US
 }
 
 .list {
-  width: 289px;
   height: 102px;
   flex-shrink: 0;
   margin-top: 20px;
+  flex-wrap: nowrap;
 }
 .list img {
   width: 24px;
@@ -441,7 +436,6 @@ OUR CASE STUDY
   padding: 7.5rem 0rem;
 }
 .case-study_title {
-  width: 367px;
   height: 98px;
   margin-bottom: 15px;
 }
@@ -1144,11 +1138,13 @@ OUR PERFORMANCE
 
 .our-subscription {
   height: 200px;
+  width: 1170px;
+  justify-content: space-between;
   border-radius: 10px;
   background: var(--Orange, #ff5300);
   box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
   padding: 51px 0 51px 40px;
-  margin: 120px;
+  margin: 120px 0px;
 }
 .sub-left {
   display: flex;
@@ -1208,6 +1204,7 @@ OUR PERFORMANCE
   border-radius: 5px;
   background: var(--white);
 
+  width: 400px;
   padding: 25px 24px;
 }
 .sub-input input::placeholder {
@@ -1334,6 +1331,7 @@ OUR FOOTER
   padding-top: 6px;
   border-top: 1px solid white;
   margin-top: 40px;
+  padding: 25px 0;
 }
 
 .copyright {
@@ -1389,8 +1387,24 @@ OUR FOOTER
 .box-2 img {
   padding: 3px 10px 3px 0px;
 }
-/* MEDIA QUERIES */
-@media screen and (max-width: 768px) {
+/* 
+
+
+
+
+
+
+MEDIA QUERIES
+
+
+
+
+
+*/
+
+/* Small screens (less than 640px) */
+
+@media screen and (max-width: 640px) {
   /* GLOBAL  */
 
   .container {
@@ -1432,15 +1446,13 @@ OUR FOOTER
     padding: 6rem 0px;
   }
   .home__content h1 {
-    font-size: 3rem;
+    font-size: 2.6rem;
     text-align: center;
-
-    max-width: 100%;
+    line-height: 53.2px;
   }
   .home__content p {
     font-size: 1.2rem;
     text-align: center;
-
     max-width: 100%;
     height: 90px;
   }
@@ -1459,14 +1471,13 @@ OUR FOOTER
 
   .our-services__cards {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-gap: 20px;
     justify-content: center;
     padding: 0 1rem;
   }
   .service-cards {
     padding: 25px 20px;
-    width: auto;
     height: auto;
   }
 
@@ -1485,9 +1496,14 @@ OUR FOOTER
 
   /* ABOUT END  */
 
+  /* TESTIMETIONAL  */
+  .slider-box {
+    max-width: 390px;
+  }
+
   /* CASE STUDY  */
   .case-study_gallery {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
 
     padding: 0 1rem;
   }
@@ -1538,7 +1554,209 @@ OUR FOOTER
   .blog-post {
     grid-template-columns: repeat(1, 1fr);
   }
+  /* OUR SUBSCRIPTION  */
+  #subscription {
+    height: auto;
+    padding: 0rem;
+  }
+  .our-subscription {
+    flex-direction: column;
+    height: 400px;
+    width: auto;
+    padding: 40px;
+    gap: 20px;
+  }
+  .sub-input {
+    justify-content: center;
+    width: auto;
+    margin-right: 0;
+  }
+  .sub-input input {
+    width: 300px;
+  }
+  .sub-input .btn-submit {
+    width: 130px;
+  }
+  .ob-blog_title {
+    width: 365px;
+    text-align: center;
+  }
+  /* OUR FOOTER  */
+
+  #footer {
+    height: auto;
+    padding: 0;
+    gap: 0;
+  }
+
+  .top-footer {
+    display: flex;
+    flex-direction: column;
+  }
+  .copyright {
+    flex-direction: column-reverse;
+    padding: 20px;
+    gap: 30px;
+  }
+  .box-2 {
+    width: auto;
+    height: auto;
+  }
+}
+@media only screen and (min-width: 641px) and (max-width: 1008px) {
+  /* Your styles for medium screens go here */
+  .container {
+    padding: 0 1rem;
+  }
+  section {
+    padding-top: 2rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  /* HEADER  */
+
+  .header__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    transform: translateX(100%);
+    transition: transform 0.3s;
+  }
+  .header__menu.show {
+    transform: translateX(0);
+  }
+  .menu-btn {
+    display: block;
+    z-index: 999;
+  }
+  /* HOME  */
+  #home {
+    flex-direction: column;
+    justify-content: center;
+    padding: 6rem 0px;
+  }
+  /* OUR SERVICES  */
+  .our-services__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    justify-content: center;
+    padding: 0 1rem;
+  }
+  .service-cards {
+    width: auto;
+  }
+
+  /* ABOUT  */
+  #about {
+    flex-direction: column;
+    height: auto;
+    width: auto;
+    gap: 2rem;
+  }
+
+  /* TESTIMETIONAL  */
+
+  .slider-box {
+    max-width: 781px;
+  }
+
+  /* CASE STUDY  */
+
+  .case-study_gallery {
+    grid-template-columns: repeat(2, 1fr);
+
+    padding: 0 1rem;
+  }
+  .case-study_gallery picture {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* CAPABILITITES  */
+  #capabilities {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .our-performance {
+    flex-direction: column;
+    width: 550px;
+    height: auto;
+  }
+  .performance-box {
+    padding: 3rem;
+  }
+  .performance-line::before {
+    display: none;
+  }
+  .performance-line::after {
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 134px;
+    background-color: var(--white);
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+  }
+  .performance-line::after {
+    bottom: 0;
+    margin-left: 33px;
+  }
+  /* OUR BLOG  */
+  #blog {
+    height: auto;
+  }
   .blog-post {
     grid-template-columns: repeat(1, 1fr);
+  }
+  /* OUR SUBSCRIPTION  */
+  #subscription {
+    height: auto;
+    padding: 0rem;
+  }
+  .our-subscription {
+    flex-direction: column;
+    height: 400px;
+    width: 700px;
+    padding: 40px;
+    gap: 20px;
+  }
+  .sub-input {
+    justify-content: center;
+    width: auto;
+    margin-right: 0;
+  }
+
+  .ob-blog_title {
+    width: 365px;
+    text-align: center;
+  }
+  /* OUR FOOTER  */
+
+  #footer {
+    height: auto;
+    padding: 0;
+    gap: 0;
+  }
+
+  .top-footer {
+    display: flex;
+    flex-direction: column;
+  }
+  .copyright {
+    flex-direction: column-reverse;
+    padding: 20px;
+    gap: 30px;
+  }
+  .box-2 {
+    width: auto;
+    height: auto;
   }
 }
