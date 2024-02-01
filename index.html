@@ -7,22 +7,10 @@
     <!-- STYLE LINKS  -->
     <!-- style css  -->
     <link rel="stylesheet" href="assets/css/style.css" />
-    <!-- swiper css link  -->
+    <!-- Link Swiper's CSS -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <!-- slider  -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      charset="UTF-8"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
     />
   </head>
   <body>
@@ -280,10 +268,10 @@
           <h1 class="ot-testimonial_title">What Our Client Saying</h1>
         </div>
         <div class="ot-testimetional_card">
-          <div class="slider-box">
-            <div class="ot-slider mobilee-slider">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
               <!--card start-->
-              <div class="ot-card">
+              <div class="ot-card swiper-slide">
                 <div class="review-stars">
                   <img src="/img/star-s-fill.png" alt="all-star-review.png" />
                   <img src="/img/star-s-fill.png" alt="all-star-review.png" />
@@ -315,7 +303,7 @@
 
               <!--card end-->
               <!--card start-->
-              <div class="ot-card">
+              <div class="ot-card swiper-slide">
                 <div class="review-stars">
                   <img src="/img/star-s-fill.png" alt="all-star-review.png" />
                   <img src="/img/star-s-fill.png" alt="all-star-review.png" />
@@ -347,7 +335,7 @@
 
               <!--card end-->
               <!--card start-->
-              <div class="ot-card">
+              <div class="ot-card swiper-slide">
                 <div class="review-stars">
                   <img src="/img/star-s-fill.png" alt="all-star-review.png" />
                   <img src="/img/star-s-fill.png" alt="all-star-review.png" />
@@ -379,7 +367,7 @@
 
               <!--card end-->
               <!--card start-->
-              <div class="ot-card">
+              <div class="ot-card swiper-slide">
                 <div class="review-stars">
                   <img src="/img/star-s-fill.png" alt="all-star-review.png" />
                   <img src="/img/star-s-fill.png" alt="all-star-review.png" />
@@ -411,7 +399,7 @@
 
               <!--card end-->
               <!--card start-->
-              <div class="ot-card">
+              <div class="ot-card swiper-slide">
                 <div class="review-stars">
                   <img src="/img/star-s-fill.png" alt="all-star-review.png" />
                   <img src="/img/star-s-fill.png" alt="all-star-review.png" />
@@ -443,7 +431,7 @@
 
               <!--card end-->
               <!--card start-->
-              <div class="ot-card">
+              <div class="ot-card swiper-slide">
                 <div class="review-stars">
                   <img src="/img/star-s-fill.png" alt="all-star-review.png" />
                   <img src="/img/star-s-fill.png" alt="all-star-review.png" />
@@ -476,7 +464,7 @@
               <!--card end-->
 
               <!--card start-->
-              <div class="ot-card">
+              <div class="ot-card swiper-slide">
                 <div class="review-stars">
                   <img src="/img/star-s-fill.png" alt="all-star-review.png" />
                   <img src="/img/star-s-fill.png" alt="all-star-review.png" />
@@ -508,7 +496,7 @@
 
               <!--card end-->
               <!--card start-->
-              <div class="ot-card">
+              <div class="ot-card swiper-slide">
                 <div class="review-stars">
                   <img src="/img/star-s-fill.png" alt="all-star-review.png" />
                   <img src="/img/star-s-fill.png" alt="all-star-review.png" />
@@ -540,7 +528,7 @@
 
               <!--card end-->
               <!--card start-->
-              <div class="ot-card">
+              <div class="ot-card swiper-slide">
                 <div class="review-stars">
                   <img src="/img/star-s-fill.png" alt="all-star-review.png" />
                   <img src="/img/star-s-fill.png" alt="all-star-review.png" />
@@ -575,14 +563,12 @@
           </div>
 
           <!--Slider buttons-->
-          <button class="ot-btn prev-btn" onclick="prevSlide()">
+          <button class="ot-btn prev-btn">
             <img src="img/Left.png" alt="" />
           </button>
-          <button class="ot-btn next-btn" onclick="nextSlide()">
+          <button class="ot-btn next-btn">
             <img src="/img/right.png" alt="" />
           </button>
-
-          <div class="swiper-pagination"></div>
         </div>
       </div>
     </section>
@@ -852,8 +838,30 @@
       </div>
     </section>
     <!-- SCRIPT LINK -->
-    <script src="index.js"></script>
+    <script src="/assets/script/index.js"></script>
 
+    <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        cssMode: true,
+        navigation: {
+          nextEl: ".next-btn",
+          prevEl: ".prev-btn",
+        },
+        mousewheel: true,
+        keyboard: true,
+        breakpoints: {
+          640: {
+            slidesPerView: 1,
+          },
+          1008: {
+            slidesPerView: 3,
+          },
+        },
+      });
+    </script>
   </body>
 </html>

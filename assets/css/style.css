@@ -645,32 +645,21 @@ OUR TESTIMONIAL
   font-weight: 600;
   line-height: 58.59px;
 }
-
+/* slider  */
 .ot-testimetional_card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: relative;
   margin-top: 60px;
-}
-.slider-box {
-  position: relative;
-  overflow: hidden;
-  padding: 0 15px;
+
   max-width: 1170px;
-  height: 271px;
+  height: 272px;
 }
 
-.ot-slider {
-  display: flex;
-  width: 1170px;
-  gap: 30px;
-
-  transition: transform 0.5s ease-in-out;
+.swiper {
+  padding: 0 15px !important;
 }
 
 .ot-card {
-  flex: 0 0 30.33%; /* Display max 3 cards in the slider */
+  flex: 0; /* Display max 3 cards in the slider */
   box-sizing: border-box;
   padding: 20px;
   justify-content: space-between;
@@ -678,10 +667,6 @@ OUR TESTIMONIAL
   border-radius: 10px;
   background: var(--white);
   box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
-  width: 370px;
-  height: 270px;
-  flex-shrink: 0;
-  width: calc(100% / 2);
 }
 
 .ot-btn {
@@ -1497,8 +1482,14 @@ MEDIA QUERIES
   /* ABOUT END  */
 
   /* TESTIMETIONAL  */
-  .slider-box {
-    max-width: 390px;
+  .ot-testimetional_card {
+    max-width: 380px;
+  }
+  .next-btn {
+    display: none;
+  }
+  .prev-btn {
+    display: none;
   }
 
   /* CASE STUDY  */
@@ -1663,8 +1654,14 @@ MEDIA QUERIES
 
   /* TESTIMETIONAL  */
 
-  .slider-box {
-    max-width: 781px;
+  .ot-testimetional_card {
+    max-width: 780px;
+  }
+  .next-btn {
+    display: none;
+  }
+  .prev-btn {
+    display: none;
   }
 
   /* CASE STUDY  */
